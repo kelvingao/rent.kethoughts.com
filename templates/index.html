@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+        <title>店铺租赁信息</title>
+        <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css" />
+        <link rel="stylesheet" href="http://cache.amap.com/lbs/static/jquery.range.css" />
+        <!-- 加载面板样式 -->
+        <link rel="stylesheet" href="/static/css/style.css">
+        <style>
+        
+        </style>
+    </head>
+
+    <body>
+        <div id="container"></div>
+        <div class="control-panel">
+            <div class="control-entry">
+                <label>选择主店位置：</label>
+                <div class="control-input">
+                    <input id="work-location" type="text">
+                </div>
+            </div>
+            <div class="control-entry">
+                <label>选择通勤方式：</label>
+                <div class="control-input">
+                    <input type="radio" name="vehicle" value="SUBWAY,BUS" onClick="takeBus(this)" checked/> 公交+地铁
+                    <input type="radio" name="vehicle" value="SUBWAY" onClick="takeSubway(this)" /> 地铁
+                </div>
+            </div>
+        </div>
+        <div id="transfer-panel"></div>
+
+        <!-- 加载地图JSAPI脚本 -->
+        <script src="http://cache.amap.com/lbs/static/jquery-1.9.1.js"></script>
+        <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+        <script src="http://webapi.amap.com/maps?v=1.4.15&key=22d3816e107f199992666d6412fa0691&plugin=AMap.ArrivalRange,AMap.Scale,AMap.Geocoder,AMap.Transfer,AMap.Autocomplete"></script>
+        <script src="http://cache.amap.com/lbs/static/jquery.range.js"></script>
+        
+        <!-- 加载自定义JS脚本 -->
+        <script src="/static/js/amap.js"></script>
+
+    </body>
+</html>
